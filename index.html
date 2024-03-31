@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Learning React</title>
-</head>
-<body>
-    <div id="root">
-        <!-- <h1>Hello World</h1> -->
-    </div>
-    <!-- Inside Script tag we can write Javascript code inside HTML -->
-    <script>
-        // creating variable named as heading and storing h1 inside it.
-        const heading = document.createElement("h1");
-        // now we h1 inside heading but to write HTML code we need to call innerHTML 
-        heading.innerHTML = "Hello from JavaScript " ;
+  </head>
+  <body>
+    <div id="root"></div>
 
-        // here we are creating a new variable root and assigning it to div element of id = root
-        const root = document.getElementById("root");
-        // now we are appending/adding h1 element inside div element of id = root
-        root.appendChild(heading);
+    <!-- This will provide core react -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+
+    <!-- This will provide core react dom which is useful for dom operations-->
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+    <script>
+        // Here we have craeted a new element using React.createElement and it accepts 3 arguments: 1). what to create 2). Inside this object we can provide attributes to tag 3). what to write inside inside element.
+        const heading  = React.createElement("h1", {}, "Hello World From React");
+
+        // Here we are using ReactDOM because here we wan to show this on browser for that we need to use ReactDOM.
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+
+        // Here we are using render method which will render our heading element inside root.
+        root.render(heading);
     </script>
-</body>
+  </body>
 </html>
