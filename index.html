@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning React</title>
+</head>
+<body>
+    <div id="root">
+        <!-- <h1>Hello World</h1> -->
+    </div>
+    <!-- Inside Script tag we can write Javascript code inside HTML -->
+    <script>
+        // creating variable named as heading and storing h1 inside it.
+        const heading = document.createElement("h1");
+        // now we h1 inside heading but to write HTML code we need to call innerHTML 
+        heading.innerHTML = "Hello from JavaScript " ;
+
+        // here we are creating a new variable root and assigning it to div element of id = root
+        const root = document.getElementById("root");
+        // now we are appending/adding h1 element inside div element of id = root
+        root.appendChild(heading);
+    </script>
+</body>
+</html>
