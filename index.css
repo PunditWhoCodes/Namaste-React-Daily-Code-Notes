@@ -1,0 +1,21 @@
+#heading {
+    color: brown;
+}
+
+#parent {
+    background-color: antiquewhite;
+    height: 90vh;
+    width: 50vw;
+}
+
+#child1 {
+    background-color: rgb(226, 175, 207);
+    height: 40vh;
+    width: 50vw;
+}
+
+#child2 {
+    background-color: rgb(113, 146, 168);
+    height: 40vh;
+    width: 50vw;
+}
